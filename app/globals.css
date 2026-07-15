@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme:dark; }
+html,body { background:#0A0B0F; color:#E8EAF2; }
+
+@layer components {
+  .grid-bg { background-color:#0A0B0F; background-image:linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),radial-gradient(ellipse 50% 40% at 50% -10%, rgba(124,92,255,0.18), transparent 70%); background-size:32px 32px, 32px 32px, 100% 100%; }
+  .panel { @apply rounded-2xl border border-border bg-panel; }
+  .glow  { box-shadow:0 0 0 1px rgba(124,92,255,.25), 0 12px 60px -10px rgba(124,92,255,.45); }
+  .chip  { @apply inline-flex items-center gap-1 rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs text-muted; }
+  .btn   { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition; }
+  .btn-p { @apply btn bg-brand text-white hover:bg-brand/90; }
+  .btn-g { @apply btn border border-border bg-surface text-ink hover:bg-panel; }
+  .label { @apply text-xs font-medium uppercase tracking-wider text-muted; }
+  .h1    { @apply text-4xl font-semibold tracking-tight md:text-5xl; }
+  .h2    { @apply text-2xl font-semibold tracking-tight md:text-3xl; }
+  .mask-fade-b { mask-image:linear-gradient(180deg,#000 75%,transparent 100%); }
+}
+::-webkit-scrollbar { width:10px; height:10px; }
+::-webkit-scrollbar-thumb { background:#1F2333; border-radius:999px; }
+::-webkit-scrollbar-track { background:transparent; }
